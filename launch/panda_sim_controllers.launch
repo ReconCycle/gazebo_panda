@@ -25,10 +25,10 @@
 
   <!-- load the Gripper controllers if args set -->
   <rosparam if="$(arg load_gripper)" command="load"
-      file="$(find gazebo_panda)/config/panda_gripper_controller.yaml" ns="$(arg ns)"/>
+      file="$(find gazebo_panda)/config/panda_gripper_controller.yaml"/>
   <node if="$(arg load_gripper)" name="panda_gripper_controller_spawner_stopped"
         pkg="controller_manager" type="controller_manager" respawn="false" output="screen"
-        args="spawn gazebo_panda/panda_gripper_controller"/>
+        args="spawn panda_gripper_controller"/>
 
   <!-- convert joint states to TF transforms -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
