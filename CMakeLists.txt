@@ -38,6 +38,6 @@ include_directories(include
 
 
 install(
-  DIRECTORY config launch worlds share
+  DIRECTORY config launch worlds
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
